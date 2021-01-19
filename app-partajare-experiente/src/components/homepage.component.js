@@ -13,7 +13,7 @@ class Homepage extends React.Component {
         nivelSatisfactie: '',
     }
 
-     handlePunctPlecare = (event) =>{
+    handlePunctPlecare = (event) =>{
     this.setState({
         punctPlecare:event.target.value
     })}
@@ -22,7 +22,7 @@ class Homepage extends React.Component {
         punctSosire:event.target.value
      })}
 
-    handleMijlocTranspor=(event)=>{
+    handleMijlocTransport=(event)=>{
         this.setState({
             mijlocTransport:event.target.value
         })}
@@ -36,12 +36,15 @@ class Homepage extends React.Component {
         this.setState({
             observatii:event.target.value
         })}
+    handleNivelSatisfactie=(event)=>{
+        this.setState({
+            nivelSatisfactie:event.target.value
+        })}
    
     
- 
     render() {
         return (
-            <form>
+            <form class="addCalatorie">
                 <div>
                     <label>Punct Plecare</label>
                     <input type='text' onChange={this.handlePunctPlecare} />
@@ -52,11 +55,10 @@ class Homepage extends React.Component {
                 </div>
                 <div>
                     <label>Mijloc de transport</label>
-                    <select value={this.state.mijlocTransport} onChange={this.handleMijlocTranspor}>
+                    <select value={this.state.mijlocTransport} onChange={this.handleMijlocTransport}>
                         <option value="autobuz">Autobuz</option>
                         <option value="metrou">Metrou</option>
                         <option value="tramvai">Tramvai</option>
-                        <option value="taxi">Taxi</option>
                     </select>
                 </div>
                 <div>
@@ -81,9 +83,17 @@ class Homepage extends React.Component {
                 </div>
 
                 <div>
+                    <label>Nivel satisfactie</label>
+                    <button type="button">&#128544;</button>
+                    <button type="button">&#128528;</button>
+                    <button type="button">&#128513;</button>
+                </div>
+
+                <div>
                     <label>Observatii</label>
                     <input type='text' size="50"  onChange={this.handleObservatii} />
                 </div>
+
             <button type="submit">Salvare informatii</button>
             </form>
         )
