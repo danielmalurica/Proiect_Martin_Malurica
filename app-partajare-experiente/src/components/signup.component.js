@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 class SignUp extends React.Component {
   render() {
@@ -7,23 +6,24 @@ class SignUp extends React.Component {
       <div class="left">
         <h1>Sign up</h1>
         
-        <input type="text" name="username" placeholder="Username" />
+        <input type="text" name="username" placeholder="Nume utilizator" />
         <input type="text" name="email" placeholder="E-mail" />
-        <input type="password" name="password" placeholder="Password" />
-        <input type="password" name="password2" placeholder="Retype password" />
+        <input type="password" name="password" placeholder="Parola" />
+        <input type="password" name="password2" placeholder="Confirmare parola" />
         
-        <input type="submit" name="signup_submit" value="Sign me up" />
+        <button type="submit" name="signup_submit" value="Inregistrare" />
       </div>
       
       <div class="right">
-        <span class="loginwith">Sign in with<br />social network</span>
+        <span class="loginwith">Autentificare<br />retele de socializare </span>
         
-        <button class="social-signin facebook">Log in with facebook</button>
-        <button class="social-signin twitter">Log in with LinkedIn</button>
-        <button class="social-signin google">Log in with Google+</button>
+        <button class="social-signin facebook">Autentificare prin Facebook</button>
+        <button class="social-signin twitter">Autentificare prin LinkedIn</button>
+        <button class="social-signin google">Autentificare prin Google+</button>
       </div>
-      <div class="or">OR</div>
+      <div class="or">SAU</div>
     </div>
     )
   }
 }
+export default SignUp;

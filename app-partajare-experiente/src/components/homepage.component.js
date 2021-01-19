@@ -69,8 +69,7 @@ class Homepage extends React.Component {
                 </div>
                 <div>
                     <label>Durata calatoriei</label>
-                    <input type='number'/>
-                    <label>Minute</label>
+                    <input type='number'/>minute
                 </div>
 
                  <div>
@@ -95,6 +94,7 @@ class Homepage extends React.Component {
                 </div>
 
             <button type="submit">Salvare informatii</button>
+            
             </form>
         )
     }

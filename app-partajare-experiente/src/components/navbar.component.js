@@ -15,7 +15,7 @@ export default class Navbar extends Component{
                             <Link to="/create" className="nav-link">Adauga Calatorie Noua</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/login" className="nav-link">Autentificare</Link>
+                            <Link to="/signup" className="nav-link">Inregistrare</Link>
                         </li>
                     </ul>
                 </div>
