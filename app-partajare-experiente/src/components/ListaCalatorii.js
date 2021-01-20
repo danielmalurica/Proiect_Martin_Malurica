@@ -2,21 +2,21 @@ import { Button } from 'bootstrap';
 import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 import axios from 'axios';
-import Calatorie from '../../../backend/models/calatorie.model';
 
 
-const Calatorie=props=>(
+
+/* const Calatorie=props=>(
     <tr>
         <td>{props.calatorie.punctPlecare}</td>
         <td>{props.calatorie.punctSosire}</td>
     </tr>
-)
+) */
 
-class List extends Component {
+class ListaCalatorii extends Component {
    constructor(props){
        super(props);
 
-       this.deleteExercise=this.deteleExercise.bind(this);
+       
 
        this.state={calatorie:[]};
 
@@ -41,11 +41,11 @@ class List extends Component {
        })
    }
 
-   calatoriiList(){
+  /*  calatoriiList(){
        return this.state.calatorie.map(currentcalatorie=>{
            return <Calatorie calatorie={currentcalatorie} deleteCalatorie={this.deleteCalatorie} key={currentcalatorie._id}/>;
        })
-   }
+   } */
 
    render(){
        return(
@@ -57,4 +57,4 @@ class List extends Component {
 
 }
 
-export default List;
+export default ListaCalatorii;

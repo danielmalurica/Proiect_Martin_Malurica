@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Search from './search.component';
-import search from './search.component'
+
 
 export default class Navbar extends Component{
     render() {

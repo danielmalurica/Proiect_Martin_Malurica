@@ -1,9 +1,10 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
-import Navbar from './components/navbar.component';
-import Homepage from './components/homepage.component'
-import SignUp from './components/signup.component'
+import Navbar from './components/Navbar';
+import Homepage from './components/Homepage'
+import SignUp from './components/SignUp'
+import ListaCalatorii from './components/ListaCalatorii';
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
      
      <Route path="/create" component={Homepage}/>
      <Route path="/signup" component={SignUp}/>
-      
+      <Route path="/list" component={ListaCalatorii}/>
     </Router>
   );
 }
