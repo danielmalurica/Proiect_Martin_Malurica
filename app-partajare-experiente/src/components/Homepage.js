@@ -29,21 +29,7 @@ export default class CreateExercise extends Component {
     }
   }
 
-  componentDidMount() {
-    axios.get('http://localhost:5000/users/')
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data.map(user => user.username),
-            username: response.data[0].username
-          })
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-
-  }
+ 
 
   onChangePunctPlecare(event) {
     this.setState({
@@ -96,7 +82,7 @@ export default class CreateExercise extends Component {
   onSubmit(e) {
     e.preventDefault();
 
-    const exercise = {
+    const calatorie = {
       punctPlecare: this.state.punctPlecare,
       punctSosire: this.state.punctSosire,
       mijlocTransport:this.state.mijlocTransport,
@@ -107,18 +93,18 @@ export default class CreateExercise extends Component {
       nivelSatisfactie:this.state.nivelSatisfactie,
     }
 
-    console.log(exercise);
+    console.log(calatorie);
 
-    axios.post('http://localhost:5000/exercises/add', exercise)
+    axios.post('http://localhost:5000/calatorie/add', calatorie)
       .then(res => console.log(res.data));
 
-    
+     window.location = '/';
   }
 
   render() {
     return (
     <div>
-      <h3>Create New Exercise Log</h3>
+      <h3>Introdu datele de mai jos pentru a adauga o calatorie noua:</h3>
       <form onSubmit={this.onSubmit}>
         
        <div>
@@ -137,6 +123,7 @@ export default class CreateExercise extends Component {
                         <option value="autobuz">Autobuz</option>
                         <option value="metrou">Metrou</option>
                         <option value="tramvai">Tramvai</option>
+                        <option value="tren">Tren</option>
                     </select>
         </div>
 
@@ -188,7 +175,7 @@ export default class CreateExercise extends Component {
         
 
         <div className="form-group">
-          <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
+          <input type="submit" value="Adauga calatorie noua" className="btn btn-primary" />
         </div>
       </form>
     </div>

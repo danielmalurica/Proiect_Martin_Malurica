@@ -8,20 +8,18 @@ router.route('/').get((req, res) => {
 });
 
 router.route('/add').post((req, res) => {
-    const user= req.body.user;
     const punctPlecare = req.body.punctPlecare;
     const punctSosire = req.body.punctSosire;
     const mijlocTransport = req.body.mijlocTransport;
     const oraDataPlecare = Date.parse(req.body.oraDataPlecare);
     const durataCalatorie = Number(req.body.durataCalatorie);
-    const gradAglomerare = Number(req.body.gradAglomerare);
+    const gradAglomerare = req.body.gradAglomerare;
     const observatii = req.body.observatii;
-    const nivelSatisfactie = Number(req.body.nivelSatisfactie);
+    const nivelSatisfactie = req.body.nivelSatisfactie;
   
     
 
     const newCalatorie= new Calatorie({
-        user,
         punctPlecare,
         punctSosire,
         mijlocTransport,
@@ -52,15 +50,14 @@ router.route('/:id').delete((req, res) => {
 router.route('/update/:id').post((req, res) => {
     Calatorie.findById(req.params.id)
         .then(calatorie => {
-            calatorie.user = req.body.user;
             calatorie.punctPlecare = req.body.punctPlecare;
             calatorie.punctSosire = req.body.punctSosire;
             calatorie.mijlocTransport = req.body.mijlocTransport;
             calatorie.oraDataPlecare = Date.parse(req.body.oraDataPlecare);
             calatorie.durataCalatorie = Number(req.body.durataCalatorie);
-            calatorie.gradAglomerare = Number(req.body.gradAglomerare);
+            calatorie.gradAglomerare = req.body.gradAglomerare;
             calatorie.observatii = req.body.observatii;
-            calatorie.nivelSatisfactie = Number(req.body.nivelSatisfactie);
+            calatorie.nivelSatisfactie = req.body.nivelSatisfactie;
 
             exercise.save()
                 .then(() => res.json('Calatorie modificata!'))
