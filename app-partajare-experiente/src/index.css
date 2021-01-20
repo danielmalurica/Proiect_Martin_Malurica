@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -13,7 +13,7 @@ body {
   margin: 5% auto;
   width: 600px;
   height: 400px;
-  background: #FFF;
+  background: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -27,11 +27,10 @@ body {
   width: 300px;
   height: 400px;
 }
-label{
+label {
   margin: 0 0 20px 0;
   font-weight: bold;
   font-size: 20px;
-
 }
 
 h1 {
@@ -48,13 +47,13 @@ select,
 button[type="button"] {
   box-sizing: border-box;
   margin-bottom: 20px;
-  margin-left:20px;
+  margin-left: 20px;
   padding: 4px;
   width: 220px;
   height: 32px;
   border: none;
-  border-bottom: 1px solid #AAA;
-  font-family: 'Roboto', sans-serif;
+  border-bottom: 1px solid #aaa;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 15px;
   transition: 0.2s ease;
@@ -74,8 +73,8 @@ button[type="submit"] {
   background: #16a085;
   border: none;
   border-radius: 2px;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   transition: 0.1s ease;
   cursor: pointer;
@@ -100,7 +99,7 @@ button[type="submit"]:active {
   left: 280px;
   width: 40px;
   height: 40px;
-  background: #DDD;
+  background: #ddd;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   line-height: 40px;
@@ -115,7 +114,7 @@ button[type="submit"]:active {
   padding: 40px;
   width: 300px;
   height: 400px;
-  background: url('https://goo.gl/YbktSj');
+  background: url("https://goo.gl/YbktSj");
   background-size: cover;
   background-position: center;
   border-radius: 0 2px 2px 0;
@@ -125,7 +124,7 @@ button[type="submit"]:active {
   display: block;
   margin-bottom: 40px;
   font-size: 28px;
-  color: #FFF;
+  color: #fff;
   text-align: center;
 }
 
@@ -135,8 +134,8 @@ button.social-signin {
   height: 36px;
   border: none;
   border-radius: 2px;
-  color: #FFF;
-  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   transition: 0.2s ease;
   cursor: pointer;
@@ -154,19 +153,18 @@ button.social-signin:active {
 }
 
 button.social-signin.facebook {
-  background: #32508E;
+  background: #32508e;
 }
 
 button.social-signin.twitter {
-  background: #55ACEE;
+  background: #55acee;
 }
 
 button.social-signin.google {
-  background: #DD4B39;
+  background: #dd4b39;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-

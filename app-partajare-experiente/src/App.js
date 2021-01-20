@@ -5,16 +5,17 @@ import Navbar from './components/navbar.component';
 import Homepage from './components/homepage.component'
 import SignUp from './components/signup.component'
 
+
 function App() {
   return (
     <Router>
-    <div className="container">
+
      <Navbar />
      <br />
-     <Homepage/>
-     <br/>
-     <SignUp/>
-    </div>
+     
+     <Route path="/create" component={Homepage}/>
+     <Route path="/signup" component={SignUp}/>
+      
     </Router>
   );
 }

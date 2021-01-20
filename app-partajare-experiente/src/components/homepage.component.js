@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
 
 class Homepage extends React.Component {
+    constructor(props){
+        super(props);
 
-    state={
+        this.state={
         punctPlecare:'',
         punctSosire:'',
         mijlocTransport:'autobuz',
-        oraPlecare:new Date(),
+        oraDataPlecare:new Date(),
         durataCalatorie:0,
         gradAglomerare: 'liber',
         observatii: '',
         nivelSatisfactie: '',
+    
     }
 
+    }
+ 
+    
     handlePunctPlecare = (event) =>{
     this.setState({
         punctPlecare:event.target.value
