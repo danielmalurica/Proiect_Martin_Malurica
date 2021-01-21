@@ -1,23 +1,23 @@
-import React, {useState} from 'react'
-import {Form, Button} from 'react-bootstrap'
+import React, { useState } from 'react'
+import { Form, Button } from 'react-bootstrap'
 
-const Search = ({history}) => {
-    const [keyword, setKeyword]=useState('')
-    
-    const submitHandler=(e)=>{
+const Search = ({ history }) => {
+    const [keyword, setKeyword] = useState('')
+
+    const submitHandler = (e) => {
         e.preventDefault()
-        if(keyword.trim()){
+        if (keyword.trim()) {
             history.push(`/search/${keyword}`)
         }
-        else{
+        else {
             history.push('/')
         }
     }
 
     return (
         <Form onSubmit={submitHandler} inline>
-            <Form.Control type='text' name='q' onChange={(e)=>setKeyword(e.target.value)} placeholder="Cauta calatorie "
-            className='mr-sm-2 ml-sm-5'></Form.Control>
+            <Form.Control type='text' name='q' onChange={(e) => setKeyword(e.target.value)} placeholder="Cauta calatorie "
+                className='mr-sm-2 ml-sm-5'></Form.Control>
             <Button type="submit" variant='outline-success' className='p-2'>Cautare</Button>
         </Form>
     )
