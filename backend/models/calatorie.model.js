@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//model pentru baza de date
 const Schema = mongoose.Schema;
 
 const calatorieSchema = new Schema({
