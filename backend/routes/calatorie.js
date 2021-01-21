@@ -9,7 +9,7 @@ router.route('/').get((req, res) => {
 
 //Adaugare calatorie
 router.route('/add').post((req, res) => {
-    const user= req.body.user;
+    const user = req.body.user;
     const punctPlecare = req.body.punctPlecare;
     const punctSosire = req.body.punctSosire;
     const mijlocTransport = req.body.mijlocTransport;
@@ -18,9 +18,9 @@ router.route('/add').post((req, res) => {
     const gradAglomerare = Number(req.body.gradAglomerare);
     const observatii = req.body.observatii;
     const nivelSatisfactie = Number(req.body.nivelSatisfactie);
-     
-    //Creare obiect cu atribute setate
-    const newCalatorie= new Calatorie({
+
+    //Creare obiect cu atribute primite
+    const newCalatorie = new Calatorie({
         user,
         punctPlecare,
         punctSosire,
@@ -32,7 +32,7 @@ router.route('/add').post((req, res) => {
         nivelSatisfactie,
     });
 
-    
+
     newCalatorie.save()
         .then(() => res.json('Calatorie adaugata!'))
         .catch(err => res.status(400).json('Error: ' + err));

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-//model pentru baza de date
+//Model pentru baza de date
 const Schema = mongoose.Schema;
 
 const calatorieSchema = new Schema({
@@ -11,7 +11,7 @@ const calatorieSchema = new Schema({
     gradAglomerare: { type: String, required: true },
     observatii: { type: String, required: true },
     nivelSatisfactie: { type: String, required: true },
-    
+
 }, {
     timestamps: true,
 });
