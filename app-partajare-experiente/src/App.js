@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import AddCalatorie from './components/AddCalatorie'
 import SignIn from './components/SignIn'
 import ListaCalatorii from './components/ListaCalatorii';
+import EditCalatorie from './components/EditCalatorie';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
      <Route path="/create" component={AddCalatorie}/>
      <Route path="/signin" component={SignIn}/>
      <Route path="/list" component={ListaCalatorii}/>
+     <Route path="/edit/:id" component={EditCalatorie}/>
     </Router>
   );
 }

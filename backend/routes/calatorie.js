@@ -63,7 +63,7 @@ router.route('/update/:id').post((req, res) => {
             calatorie.observatii = req.body.observatii;
             calatorie.nivelSatisfactie = req.body.nivelSatisfactie;
 
-            exercise.save()
+            calatorie.save()
                 .then(() => res.json('Calatorie modificata!'))
                 .catch(err => res.status(400).json('Error: ' + err));
         })
