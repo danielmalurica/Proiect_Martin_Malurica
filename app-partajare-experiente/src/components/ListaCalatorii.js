@@ -14,7 +14,7 @@ const Calatorie = props => (
         <td>{props.calatorie.observatii}</td>
         <td>{props.calatorie.nivelSatisfactie}</td>
         <td>
-            <Link to={"/edit/" + props.calatorie._id}>Editare</Link> | <a href="#" onClick={() => { }}>Ștergere</a>
+            <Link to={"/edit/" + props.calatorie._id}>Editare</Link> | <a href="#" onClick={() => { props.deleteCalatorie(props.calatorie._id) }}>Ștergere</a>
         </td>
     </tr>
 )
@@ -23,7 +23,7 @@ class ListaCalatorii extends Component {
     constructor(props) {
         super(props);
         this.state = { calatorie: [] };
-
+         this.deleteCalatorie = this.deleteCalatorie.bind(this)
     }
 
     componentDidMount() {
@@ -36,9 +36,18 @@ class ListaCalatorii extends Component {
             })
     }
 
+     deleteCalatorie(id) {
+    axios.delete('http://localhost:5000/calatorie/'+id)
+      .then(response => { console.log(response.data)});
+
+    this.setState({
+      calatorie: this.state.calatorie.filter(el => el._id !== id)
+    })
+  }
+
     calatoriiList() {
         return this.state.calatorie.map(currentcalatorie => {
-            return <Calatorie calatorie={currentcalatorie} key={currentcalatorie._id} />;
+            return <Calatorie calatorie={currentcalatorie} deleteCalatorie={this.deleteCalatorie} key={currentcalatorie._id} />;
         })
     }
 
